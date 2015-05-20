@@ -1,0 +1,35 @@
+
+public class CalculateArea {
+	int a;
+	int b;
+	
+	CalculateArea(){
+		a=0;
+		b=0;
+		
+	}
+	CalculateArea(int a){
+		this.a = a;
+		int area = this.a*this.a;
+		System.out.println("Area of a Square : "+area);
+		
+	}
+	
+	CalculateArea(int length, int breadth){
+		a=length;
+		b=breadth;
+		
+		int area = a*b;
+		System.out.println("Area of a Rectangle : "+area);
+		
+	}
+
+	public static void main(String args[]){
+		
+		CalculateArea ca = new CalculateArea();
+		CalculateArea cas = new CalculateArea(4);
+		CalculateArea caq = new CalculateArea(4,5);
+		
+	}
+}
+
