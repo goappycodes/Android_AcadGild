@@ -1,0 +1,171 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/text_creditcard"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#B0B0B0"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/textCardBalance"
+        android:id="@+id/textCardBalance"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/textheight1" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editCardBalance"
+        android:layout_below="@+id/textView"
+        android:nextFocusDown="@+id/editYearlyRateOfInterest"
+        android:layout_alignRight="@+id/editYearlyRateOfInterest"
+        android:layout_alignEnd="@+id/editYearlyRateOfInterest"
+        android:textCursorDrawable="@null" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/textYearlyRateofInterest"
+        android:id="@+id/textYearlyRateofInterest"
+        android:layout_below="@+id/editCardBalance"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/editYearlyRateOfInterest"
+        android:layout_toStartOf="@+id/editYearlyRateOfInterest"
+        android:layout_marginTop="@dimen/btn_height"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editYearlyRateOfInterest"
+        android:layout_above="@+id/editMinimumPayment"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:nextFocusDown="@+id/editMinimumPayment"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/textMinimumPayment"
+        android:id="@+id/textMinimumPayment"
+        android:layout_below="@+id/textYearlyRateofInterest"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textInterestPaid"
+        android:layout_alignEnd="@+id/textInterestPaid"
+        android:layout_marginTop="@dimen/btn_height"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editMinimumPayment"
+        android:layout_below="@+id/textYearlyRateofInterest"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/textFinalCardBalance"
+        android:id="@+id/textFinalCardBalance"
+        android:layout_below="@+id/textMinimumPayment"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/textheight"
+        android:layout_alignRight="@+id/textInterestPaid"
+        android:layout_alignEnd="@+id/textInterestPaid"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editFinalCardBalance"
+        android:focusable="false"
+        android:cursorVisible="false"
+        android:layout_alignTop="@+id/textFinalCardBalance"
+        android:layout_alignRight="@+id/editCardBalance"
+        android:layout_alignEnd="@+id/editCardBalance" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/textMonthsRemaining"
+        android:id="@+id/textMonthsRemaining"
+        android:layout_below="@+id/editFinalCardBalance"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editMonthsRemaining"
+        android:focusable="false"
+        android:cursorVisible="false"
+        android:layout_alignTop="@+id/textMonthsRemaining"
+        android:layout_alignLeft="@+id/editMinimumPayment"
+        android:layout_alignStart="@+id/editMinimumPayment" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/textInterestPaid"
+        android:id="@+id/textInterestPaid"
+        android:layout_below="@+id/editMonthsRemaining"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editInterestPaid"
+        android:focusable="false"
+        android:cursorVisible="false"
+        android:layout_alignTop="@+id/textInterestPaid"
+        android:layout_alignLeft="@+id/editMonthsRemaining"
+        android:layout_alignStart="@+id/editMonthsRemaining" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textCompute"
+        android:id="@+id/buttonCompute"
+        android:layout_below="@+id/editInterestPaid"
+        android:layout_alignRight="@+id/textInterestPaid"
+        android:layout_alignEnd="@+id/textInterestPaid"
+        android:layout_marginTop="@dimen/btn_height1"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textClear"
+        android:id="@+id/buttonClear"
+        android:layout_below="@+id/buttonCompute"
+        android:layout_alignRight="@+id/buttonCompute"
+        android:layout_alignEnd="@+id/buttonCompute" />
+</RelativeLayout>
+</ScrollView>
