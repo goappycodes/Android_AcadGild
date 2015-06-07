@@ -55,7 +55,11 @@ public class MainActivity extends Activity implements View.OnClickListener{
         if(v.getId()==R.id.buttonCompute){
             if(cardBal>0) {
                 monthlyInterestPaid = (int) Math.round((cardBal * x));
-                monthlyPriciple =  minPay - monthlyInterestPaid;
+                if(cardBal<minPay){
+                    monthlyPriciple = cardBal;
+                }else{
+                    monthlyPriciple =  minPay - monthlyInterestPaid;
+                }
                 monthlyBalance = cardBal - monthlyPriciple;
 
                 count++;
